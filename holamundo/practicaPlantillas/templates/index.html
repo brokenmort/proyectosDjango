@@ -1,0 +1,70 @@
+{% extends './layouts/base.html' %}
+{% load static %}
+{%block content %}
+  <div class="slider">
+    <ul>
+        <li>
+          <video autoplay muted>
+            <source src="{%static 'img/ppts/pptRelojes.mp4'%}" type="video/mp4"></source>
+         </video>
+            <div class="texto">
+                <h1>Relojes inteligentes</h1>
+                <button>
+                    <a href="{%url 'portafolio'%}">more info</a>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+            </div>         
+        </li>
+
+        <li>
+          <video autoplay muted>
+            <source src="{%static 'img/ppts/pptAudifonos.mp4'%}" type="video/mp4"></source>
+         </video>
+            <div class="texto">
+                <h1>audifonos</h1>
+                <button>
+                    <a href="{%url 'portafolio'%}">more info</a>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+            </div> 
+        </li>
+
+        <li>
+            <img src="https://picsum.photos/1920/1080" >
+            <div class="texto">
+                <h1>accesorios</h1>
+                <button>
+                    <a href="{%url 'portafolio'%}">more info</a>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+            </div> 
+        </li>
+
+        <li>
+            <img src="https://picsum.photos/1920/1080" >
+            <div class="texto">
+                <h1>cargadores</h1>
+                <button>
+                    <a href="{%url 'portafolio'%}">more info</a>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+            </div> 
+        </li>
+
+    </ul>
+
+  </div>
+
+{% endblock %}

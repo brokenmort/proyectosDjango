@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>exacto un 5</h3>
+    <ul>
+        {%for exacto in exacto%}
+        <li>{{exacto.id}}</li>
+        {%endfor%}
+    </ul>
+
+    <h3>contienen un 5</h3>
+    <ul>
+        {%for contener in contener%}
+        <li>{{contener.id}}</li>
+        {%endfor%}
+    </ul>
+
+    <h3>mayor a 15</h3>
+    <ul>
+        {%for mayor in mayor%}
+        <li>{{mayor.id}}</li>
+        {%endfor%}
+    </ul>
+
+    <h3>menor a 15</h3>
+    <ul>
+        {%for menor in menor%}
+        <li>{{menor.id}}</li>
+        {%endfor%}
+    </ul>
+
+    <h3>mayor o igual a 15</h3>
+    <ul>
+        {%for mayorIgual in mayorIgual%}
+        <li>{{mayorIgual.id}}</li>
+        {%endfor%}
+    </ul>
+
+    <h3>menor o igual a 15</h3>
+    <ul>
+        {%for menorIgual in menorIgual%}
+        <li>{{menorIgual.id}}</li>
+        {%endfor%}
+    </ul>
+
+    <h3>order by email</h3>
+    <ul>
+        {%for order in order%}
+        <li>{{order.email}}</li>
+        {%endfor%}
+    </ul>
+
+    <h3>obteniendo 5 registros despúes de los 5 primeros</h3>
+    <ul>
+        {%for off in offsets%}
+        <li>{{off.email}}</li>
+        {%endfor%}
+    </ul>
+
+    <h3>obteniendo los 10 primeros(limit)</h3>
+    <ul>
+        {%for limit in limite%}
+        <li>{{limit.email}}</li>
+        {%endfor%}
+    </ul>
+
+    <h3>Buscando autor unico(filtrado en este caso por id)</h3>
+    <p>{{authorUnico}}</p>
+
+    <h3>Buscando autor por email especifico</h3>
+    <ul>
+        {%for elm in filtrado%}
+        <li>{{elm.name}} | {{elm.email}}</li>
+        {%endfor%}
+    </ul>
+    <h1>Todos los autores</h1>
+    <ul>
+        {% for author in autores%}
+        <li>{{author.name}} ({{author.email}})</li>
+        {% endfor%}
+    </ul>
+    <h3>Total de autores: {{autores|length}}</h3>
+</body>
+</html>
