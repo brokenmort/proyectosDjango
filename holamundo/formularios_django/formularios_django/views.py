@@ -28,4 +28,4 @@ def widget(request):
             return HttpResponse("valido")
         else:
             # aquí se hacen las acciones a tomar cuando los datos no son validos, como avisar a usuario que no es correcto y que lo modifique
-            return HttpResponse("no valido")
+            return render(request, 'widget.html', {'form': form})

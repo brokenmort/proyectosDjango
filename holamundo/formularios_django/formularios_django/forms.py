@@ -17,3 +17,12 @@ class ContactForm(forms.Form):
 
     message = forms.CharField(label="Mensaje", widget=forms.Textarea(
         attrs={'class': 'form-control'}))
+
+    def clean_name(self):
+        name = self.cleaned_data.get("name")
+        if name != "morcilla":
+            raise forms.ValidationError("solo se puede el nombre: morcilla")
+         # error
+        else:
+            # exito
+            return name
