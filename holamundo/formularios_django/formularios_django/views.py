@@ -17,6 +17,15 @@ def goal(request):
 
 
 def widget(request):
-    form = ContactForm()
+    if request.method == 'GET':
+        form = ContactForm()
+        return render(request, 'widget.html', {'form': form})
 
-    return render(request, 'widget.html', {'form': form})
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # aqui van todas las acciones necesarias cuando todos los datos son correctos
+            return HttpResponse("valido")
+        else:
+            # aquí se hacen las acciones a tomar cuando los datos no son validos, como avisar a usuario que no es correcto y que lo modifique
+            return HttpResponse("no valido")
